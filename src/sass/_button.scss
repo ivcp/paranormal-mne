@@ -1,0 +1,17 @@
+.btn:link,
+.btn:visited {
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: $colorLight-2;
+  color: $colorGrey-1;
+  padding: 0.8rem 3rem;
+  border: 2px solid $colorLight-2;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: $colorGrey-1;
+  color: $colorLight-2;
+}

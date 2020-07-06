@@ -1,0 +1,119 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $colorGrey-1;
+  border-bottom: 2px solid $colorGrey-1;
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: row;
+    border-bottom: none;
+    justify-content: center;
+  }
+  @media only screen and (max-width: $bp-small) {
+    justify-content: space-around;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    width: 90vw;
+    @media only screen and (max-width: $bp-large) {
+      justify-content: flex-start;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 60vw;
+    }
+  }
+
+  &__links {
+    background: #fff;
+    width: 100%;
+    padding: 2rem;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+    }
+    &-btn:link,
+    &-btn:visited {
+      font-family: $fontTitle;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 1.5rem;
+      border-left: 2px solid $colorGrey-1;
+      border-right: 2px solid $colorGrey-1;
+      padding: 1rem 3.5rem;
+      text-decoration: none;
+      color: $colorGrey-1;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    &-btn:link:hover,
+    &-btn:visited:hover {
+      color: #fff;
+      background-color: $colorGrey-1;
+    }
+    @media only screen and (max-width: $bp-large) {
+      display: none;
+    }
+  }
+  &__logo {
+    margin-right: 2rem;
+    img {
+      display: block;
+      height: 5rem;
+      width: 100%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-family: $fontBig;
+    font-size: 5rem;
+    color: #fff;
+    letter-spacing: 0.0625em;
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 4rem;
+      text-align: left;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    button {
+      display: flex;
+      border: none;
+      background: transparent;
+      font-size: 4rem;
+      color: #fff;
+      cursor: pointer;
+    }
+    @media only screen and (max-width: $bp-large) {
+      display: flex;
+      align-items: center;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3.5rem;
+    }
+  }
+}

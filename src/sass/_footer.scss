@@ -1,0 +1,23 @@
+.footer {
+  height: 10rem;
+  background-color: $colorGrey-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__social {
+    &-link:link,
+    &-link:visited {
+      font-size: 3rem;
+      margin: 1rem;
+      color: $colorLight-2;
+    }
+  }
+
+  &__copy {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $colorLight-2;
+  }
+}

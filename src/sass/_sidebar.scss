@@ -1,0 +1,51 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $colorGrey-2;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+  z-index: 999;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: all 0.3s linear;
+
+  &__container {
+    ul {
+      list-style: none;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    &-links:link,
+    &-links:visited {
+      font-size: 3.5rem;
+      font-family: $fontTitle;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background: transparent;
+    border: transparent;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.showSidebar {
+  transform: translateX(0);
+  visibility: visible;
+}
