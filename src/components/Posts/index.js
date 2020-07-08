@@ -6,17 +6,18 @@ import { Link } from "gatsby"
 const Posts = ({ posts }) => {
   return (
     <section className="posts">
-      <article>
+      <article className="posts__posts">
         {posts.map(({ node: post }) => {
           return <Post key={post.id} {...post} />
         })}
         <div className="posts__btn">
-          <Link to="#" className="btn">
+          <Link to="/svi-clanci" className="btn">
             Svi članci
           </Link>
         </div>
+        <div className="posts__line"></div>
       </article>
-      <article>
+      <article className="posts__banner">
         <Banner />
       </article>
     </section>

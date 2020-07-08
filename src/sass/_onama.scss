@@ -1,0 +1,21 @@
+.onama {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5rem;
+  &__text {
+    margin: 5rem 5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: $colorLight-2;
+    padding: 0 5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 5rem 0;
+      padding: 0;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 0;
+  }
+}

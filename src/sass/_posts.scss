@@ -1,15 +1,44 @@
 .posts {
   width: 90vw;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
+  max-width: 120rem;
+  margin: 4rem auto;
   display: grid;
   grid-template-columns: 1fr 25rem;
   column-gap: 1rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 1fr;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 95vw;
+  }
+
+  &__posts {
+    @media only screen and (max-width: $bp-medium) {
+    }
+  }
+
+  &__banner {
+    @media only screen and (max-width: $bp-medium) {
+      width: 50vw;
+      margin: 0 auto;
+      margin-top: 6rem;
+    }
+  }
+
   &__btn {
     margin: 0 auto;
     text-align: center;
+  }
+
+  &__line {
+    display: none;
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+      border: 2px solid #333c4a;
+      width: 40%;
+      margin: 6rem auto 0;
+    }
   }
 }

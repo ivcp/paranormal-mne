@@ -4,14 +4,14 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { RiArrowRightSLine } from "react-icons/ri"
 
-const Post = ({ id, title, description, slug, backgoundImage, date }) => {
+const Post = ({ title, description, slug, backgoundImage, date }) => {
   return (
     <Wrapper>
       <Image fluid={backgoundImage.fluid} className="img" />
       <h1>{title}</h1>
       <h4>{description}</h4>
       <p>{date}</p>
-      <Link className="link" to="#">
+      <Link className="link" to={`/${slug}`}>
         Pročitaj <RiArrowRightSLine />
       </Link>
     </Wrapper>
@@ -29,6 +29,12 @@ const Wrapper = styled.article`
   margin-bottom: 4rem;
   padding-bottom: 1rem;
   overflow: hidden;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+
+  @media only screen and (max-width: 50em) {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
 
   .img {
     display: block;
@@ -36,11 +42,14 @@ const Wrapper = styled.article`
     width: 100%;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
-    overflow: hidden;
     transition: scale 1.5s;
 
     &:hover {
       scale: 1.025;
+    }
+
+    @media only screen and (max-width: 31.25em) {
+      height: 30rem;
     }
   }
 
@@ -56,6 +65,11 @@ const Wrapper = styled.article`
     color: #fff;
     background: rgba(0, 0, 0, 0.6);
     padding: 0 1.5rem;
+
+    @media only screen and (max-width: 31.25em) {
+      font-size: 3rem;
+      text-align: center;
+    }
   }
 
   h4 {
@@ -66,6 +80,9 @@ const Wrapper = styled.article`
     font-style: italic;
     text-align: center;
     padding: 3rem;
+    @media only screen and (max-width: 31.25em) {
+      text-align: left;
+    }
   }
 
   p {
@@ -100,6 +117,11 @@ const Wrapper = styled.article`
     svg {
       margin-left: 0.5rem;
       font-size: 2rem;
+    }
+    @media only screen and (max-width: 31.25em) {
+      border: none;
+      flex-direction: column;
+      padding: 1rem 1.2rem;
     }
   }
 

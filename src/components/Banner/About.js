@@ -41,6 +41,10 @@ const Wrapper = styled.div`
     font-size: 1.5rem;
     color: #f8fceb;
     text-align: center;
+
+    @media only screen and (max-width: 50em) {
+      text-align: left;
+    }
   }
 `
 

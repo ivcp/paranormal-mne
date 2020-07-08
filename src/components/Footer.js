@@ -2,18 +2,17 @@ import React from "react"
 
 import { AiOutlineFacebook } from "react-icons/ai"
 import { AiOutlineTwitter } from "react-icons/ai"
-import { Link } from "gatsby"
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__social">
-        <Link to="https://twitter.com/" className="footer__social-link">
+        <a href="https://twitter.com/" className="footer__social-link">
           <AiOutlineTwitter />
-        </Link>
-        <Link to="https://twitter.com/" className="footer__social-link">
+        </a>
+        <a href="https://twitter.com/" className="footer__social-link">
           <AiOutlineFacebook />
-        </Link>
+        </a>
       </div>
       <p className="footer__copy">
         &copy; Paranormal Montenegro {new Date().getFullYear()}

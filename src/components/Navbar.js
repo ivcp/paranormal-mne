@@ -20,12 +20,12 @@ const Navbar = ({ toggle }) => {
             </Link>
           </li>
           <li>
-            <Link className="navbar__links-btn" to="#">
+            <Link className="navbar__links-btn" to="/pisite-nam">
               pošaljite vašu priču
             </Link>
           </li>
           <li>
-            <Link className="navbar__links-btn" to="#">
+            <Link className="navbar__links-btn" to="/svi-clanci">
               svi članci
             </Link>
           </li>

@@ -23,7 +23,7 @@ const Caregories = () => {
         {distinct.map((category, index) => {
           return (
             <li key={index}>
-              <Link to="#" className="link">
+              <Link to={`/${category}`} className="link">
                 <AiOutlineTags /> {category}
               </Link>
             </li>
@@ -41,6 +41,10 @@ const Wrapper = styled.div`
     text-align: center;
     color: #fff;
     margin-bottom: 1rem;
+
+    @media only screen and (max-width: 50em) {
+      margin-bottom: 3rem;
+    }
   }
   ul {
     list-style: none;
@@ -68,6 +72,11 @@ const Wrapper = styled.div`
 
     svg {
       margin-right: 0.5rem;
+    }
+
+    @media only screen and (max-width: 50em) {
+      width: max-content;
+      margin: 0 auto;
     }
   }
 

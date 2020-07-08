@@ -1,0 +1,54 @@
+.pisite {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem 0;
+    width: 95vw;
+  }
+
+  &__form {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: 10rem auto;
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+
+    & > * {
+      margin-bottom: 1rem;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.6;
+      font-family: $fontText;
+      font-weight: 600;
+    }
+
+    &-text {
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    border-style: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    border: 2px solid #fff;
+    background: $colorLight-2;
+    transition: all 0.3s;
+    color: $colorGrey-2;
+    letter-spacing: 1px;
+  }
+
+  &__btn:hover {
+    background: $colorGrey-2;
+    color: #fff;
+  }
+}
