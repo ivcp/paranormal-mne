@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { AiOutlineTags } from "react-icons/ai"
+import SEO from "../components/seo"
 
 const PostTemplate = ({ data }) => {
   const {
@@ -19,6 +20,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <section className="post">
         <div className="post__head">
           <Image fluid={backgoundImage.fluid} className="post__head-img" />
@@ -29,13 +31,14 @@ const PostTemplate = ({ data }) => {
           <p className="post__date-date">{date}</p>
           <div className="post__date-line"></div>
         </div>
+        {/* TODO: Style section titles and other alements if necessary */}
         <article
           className="post__content"
           dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }}
         />
         {category.map((item, index) => {
           return (
-            <Link to={`/${item}`} className="post__tag">
+            <Link to={`/${item}`} key={index} className="post__tag">
               <AiOutlineTags /> {item}
             </Link>
           )

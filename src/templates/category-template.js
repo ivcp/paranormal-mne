@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Posts from "../components/Posts"
 import Title from "../components/Title"
+import SEO from "../components/seo"
 
 const CategoryTemplate = props => {
   const {
@@ -16,6 +17,7 @@ const CategoryTemplate = props => {
 
   return (
     <Layout>
+      <SEO title="Kategorije" />
       <Title title={category} />
       <Posts posts={posts} />
     </Layout>

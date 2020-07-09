@@ -7,6 +7,7 @@ import { RiArrowRightSLine } from "react-icons/ri"
 const Post = ({ title, description, slug, backgoundImage, date }) => {
   return (
     <Wrapper>
+      {/* TOTO: Image has 1px right border on chrome */}
       <Image fluid={backgoundImage.fluid} className="img" />
       <h1>{title}</h1>
       <h4>{description}</h4>
@@ -37,15 +38,14 @@ const Wrapper = styled.article`
   }
 
   .img {
-    display: block;
     height: 40rem;
     width: 100%;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
-    transition: scale 1.5s;
+    transition: all 1.5s;
 
     &:hover {
-      scale: 1.025;
+      transform: scale(1.025);
     }
 
     @media only screen and (max-width: 31.25em) {

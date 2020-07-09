@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Posts from "../components/Posts"
+import SEO from "../components/seo"
 
 const posts = ({ data }) => {
   const {
@@ -9,6 +10,7 @@ const posts = ({ data }) => {
   } = data
   return (
     <Layout>
+      <SEO title="Svi članci" />
       <Posts posts={posts} />
     </Layout>
   )

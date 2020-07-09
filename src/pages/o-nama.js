@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import Title from "../components/Title"
+import SEO from "../components/seo"
 const onama = () => {
   return (
     <Layout>
+      <SEO title="O Nama" />
       <article className="onama">
         <Title title="o nama" />
 
