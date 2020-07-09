@@ -28,7 +28,7 @@ module.exports = {
         short_name: `paranormal`,
         start_url: `/`,
         background_color: ` #333c4a`,
-        theme_color: `#f6f7d3`,
+        theme_color: `#333c4a`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
